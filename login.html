@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Exemplo Charset</title>
+        <meta charset="utf-8"/>
+    <body>
+        <h1>Login Kiosqui do chef</h1>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <p>
+                    <label for="campo_nome">Nome:</label>
+                    <input tabindex="2" type="text" name="nome" id="campo_nome">
+                </p>
+                <p>
+                    <label for="campo_email">Email:</label>
+                    <input tabindex="1" type="email" name="email" id="campo_email" placeholder="email@email.com">                    
+                </p>
+                <p>
+                    <label>Genero</label><br>
+                    <input type="radio" id="genero_masculino" name="genero" value="M">
+                    <label for="genero_masculino">Masculino</label>
+                    <input type="radio" id="genero_feminino" name="genero" value="F">
+                    <label for="genero_feminino">Feminino</label>
+                </p>
+                <p>
+                    <label for="campo_idade">Idade</label> 
+                    <input tabindex ="3" min="16" max="80" id="campo_idade" name="idade" step="1">
+                </p>
+                <p>
+                    <label for="campo_nasc">Data nascimento</label> 
+                    <input type="date" id="campo_nasc" name="nasc">
+                </p>
+                <p>
+                    <label for="campo_preferencias">Preferências</label>
+                    <select name="campo_preferencias">
+                        <optgroup label="Cerveja">
+                            <option value="brahma">Brahma</option>
+                            <option value="skol">Skol</option>
+                            <option value="petra">petra</option>
+                        </optgroup>
+                        <optgroup label="vinho">
+                            <option value="cabern">Cabernet Suavignn</option>
+                            <option value="chardnn">Chardonnay</option>
+                            <option value="merr">Merlot</option>
+                        </optgroup>
+                        <optgroup label="whisky">
+                            <option value="macallan">Macallan</option>
+                            <option value="jackdan">Jack Daniels</option>
+                            <option value="james">Jameson</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
+            <br>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
