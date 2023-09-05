@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    ri: 50vh;
+}
+
+.box {
+    flex: 1;
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 10px;
+    border-radius:6px;
+    background-color: rgb(255, 222, 89);
+}
+.box-container {
+    display: flex;
+    height: 50vh;
+}
+.box:first-child {
+    flex: 1; /* Define o primeiro box como maior */
+}
+
+.box:nth-child(n+2) {
+    flex: ; /* Define os três boxes inferiores para ocuparem 33.33% cada */
+}
+body{
+    background-color: rgba(26, 25, 29, 0.932);
+}
