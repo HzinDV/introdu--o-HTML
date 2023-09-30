@@ -1,0 +1,31 @@
+body{
+    background-color: rgba(26, 25, 29, 0.932);
+}
+.texto{
+    color: rgb(255, 222, 89) ;
+}
+.botao {
+    display: inline-block;
+    padding: 0.3em 0.5em;
+    text-decoration: none;
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    background-color: rgb(255, 222, 89);
+    font-weight: bold;
+    color: black;
+  }
+  .botao:hover {
+    background-color: #3a2e2e10;
+    color:rgb(255, 222, 89);
+}
+.lista{
+    list-style: none;
+}
+.pergunta{
+    display: flex;
+    justify-content: center;
+}
+fieldset{
+    border-color: gold;
+    border-width: 5px;
+}

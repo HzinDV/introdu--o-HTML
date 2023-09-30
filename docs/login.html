@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Exemplo Charset</title>
+        <title>Login</title>
         <meta charset="utf-8"/>
+        <link rel="stylesheet" href="login.css">
     <body>
-        <h1>Login Kiosqui do chef</h1>
+        <h1 class="texto">Login Kiosqui do chef</h1>
         <form action="https://webhook.site/df9da434-877f-40f0-aa8f-c1d9cbc26484" method="POST">
             <fieldset>
-                <legend>Dados pessoais</legend>
-                <p>
-                    <label for="campo_nome">Nome:</label>
+                <p class="pergunta">
+                    <label for="campo_nome" class="texto">Nome:</label>
                     <input tabindex="2" type="text" name="nome" id="campo_nome">
                 </p>
-                <p>
-                    <label for="campo_email">Email:</label>
+                <p class="pergunta">
+                    <label for="campo_email" class="texto">Email:</label>
                     <input tabindex="1" type="email" name="email" id="campo_email" placeholder="email@email.com">                    
                 </p>
-                <p>
-                    <label>Genero</label><br>
+                <p class="pergunta">
+                    <label class="texto">Genero</label><br>
                     <input type="radio" id="genero_masculino" name="genero" value="M">
-                    <label for="genero_masculino">Masculino</label>
+                    <label for="genero_masculino" class="texto">Masculino</label>
                     <input type="radio" id="genero_feminino" name="genero" value="F">
-                    <label for="genero_feminino">Feminino</label>
+                    <label for="genero_feminino" class="texto">Feminino</label>
                     <input type="radio" id="genero_outros" name="genero" value="O">
-                    <label for="genero_outros">Outros</label>
+                    <label for="genero_outros" class="texto">Outros</label>
                 </p>
-                <p>
-                    <label for="campo_idade">Idade</label> 
+                <p class="pergunta">
+                    <label for="campo_idade" class="texto">Idade</label> 
                     <input tabindex ="3" min="16" max="80" id="campo_idade" name="idade" step="1">
                 </p>
-                <p>
-                    <label for="campo_nasc">Data nascimento</label> 
+                <p class="pergunta">
+                    <label for="campo_nasc" class="texto">Data nascimento</label> 
                     <input type="date" id="campo_nasc" name="nasc">
                 </p>
-                <p>
-                    <label for="campo_preferencias">Preferências</label>
+                <p class="pergunta">
+                    <label for="campo_preferencias" class="texto">Preferências</label>
                     <select name="campo_preferencias">
                         <optgroup label="Cerveja">
                             <option value="brahma">Brahma</option>
@@ -53,10 +53,19 @@
                         </optgroup>
                     </select>
                 </p>
+                <p class="pergunta">
+                    <label for="senha" class="texto">Senha:</label>
+                    <input type="password" name="senha" id="campo_senha">
+                </p>
+                <p class="pergunta">
+                    <label for="senha2" class="texto">Repetir a Senha:</label>
+                    <input type="password" name="senha" id="campo_senha2">
+                </p>
             </fieldset>
             <br>
             <br>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="botao">Enviar</button>
+            <a href="index.html" class="botao">voltar</a>
         </form>
         
     </body>
