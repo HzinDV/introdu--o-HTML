@@ -11,11 +11,6 @@ url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Forma
     flex-direction: column;
     justify-content: space-between;
 }
-
-.titulo{
-  color: rgb(238, 239, 239);
- 
-}
 .box {
     flex: 1;
     border: 1px solid #000;
