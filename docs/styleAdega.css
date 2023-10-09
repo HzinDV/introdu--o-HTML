@@ -54,10 +54,6 @@ body{
     display: flex;
     align-items: center;
 }
-
-.texto{
-    color: rgb(255, 222, 89) ;
-}
 .botao {
     display: inline-block;
     padding: 0.3em 0.5em;
