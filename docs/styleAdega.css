@@ -1,22 +1,56 @@
 @font-face {
     font-family: 'MinhaFontePersonalizada';
-    src: url('ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
+    src: url('img/ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
          
         
 url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
 }
-
+*{
+    font-family: 'MinhaFontePersonalizada';
+}
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 3rem;
+    margin-top: 5vh;
+   
+}
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 3rem;
+   
+}
+.box2 {
+    flex: 1;
+    border: 1px solid #000;
+    margin: 1vh;
+    padding: 1,5vh;
+    border-radius:3vh;
+    height: 35vh;
+    width: 50vh;
+    background-color: rgb(255, 222, 89);
+    display: flex;
+    justify-content: space-between;
+    right: 40vh;
+    margin-right: 2vh;
+}
+#hominho{
+    margin-top: 5vh;
+    margin-bottom: auto;
+    margin-left: 6vh;
+}
+#hominho img{
+    height: 20vh;
 }
 .box {
     flex: 1;
     border: 1px solid #000;
     margin: 5px;
     padding: 10px;
-    border-radius:6px;
+    border-radius:5vh;
     background-color: rgb(255, 222, 89);
     display: grid;
     justify-content: center;
@@ -24,36 +58,47 @@ url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Forma
 .box-container {
     display: flex;
     height: 50vh;
-}
-.box:first-child {
-    flex: 0.3; /* Define o primeiro box como maior */
-}
-
-.box-center{
-    flex: 0.6;
+    font-size: 2rem;
+    gap: 5 vh;
+    margin-top: 3vh;
 }
 
-.box:nth-child(n+2) {
-    flex: 1; /* Define os três boxes inferiores para ocuparem 33.33% cada */
-}
 body{
-    background-color: rgba(26, 25, 29, 0.932);
+    background-color: rgb(38,37,41);
     font-family: 'MinhaFontePersonalizada', sans-serif;
-
+  
 }
 #img1{
     width: auto;
     height: 30vh;
     justify-content: center;
 }
-.titulo{
-    height: 30vh;
-    width: 2rem;
-    size-adjust: 2rem;
-    flex: 1;
-    display: flex;
-    align-items: center;
+#img2{
+    height: 10vh;
 }
+#imgPrincipal{
+    height: 30vh;
+}
+.titulo{
+    size-adjust: 1rem;
+    display: flex;
+    font-size: 1rem;
+    color: rgb(238, 239, 239);
+}
+#vendaMensal {
+    color: white;
+}
+#estoqueGeral{
+    color: white;
+}
+#vender{
+    margin-top: 10vh;
+    margin-right: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .botao {
     display: inline-block;
     padding: 0.3em 0.5em;
