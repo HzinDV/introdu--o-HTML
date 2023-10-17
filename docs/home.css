@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'MinhaFontePersonalizada';
+
+    src: url('Hertical Sans Texture/ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
+         
+        
+url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
+}
+*{
+    font-feature-settings: "lnum";
+    font-family: 'MinhaFontePersonalizada';
+}
 body{
     background-color: rgba(26, 25, 29, 0.932);
 }
@@ -18,13 +30,19 @@ body{
     color: black;
   }
 
-  .botao:hover {
+.botao:hover {
     background-color: #3a2e2e10;
     color:rgb(255, 222, 89);
 }
 .lista{
     list-style: none;
+    
 }
 .texto{
-    color: rgb(255, 222, 89);
+    
+    color:rgb(255, 222, 89);
+}
+.footer{
+    font: sans-serif;
+
 }
