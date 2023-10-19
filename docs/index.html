@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiosque do Chefe</title>
     <link rel="stylesheet" href="home.css">
+    <title>Kiosque do Chefe</title>
 </head>
 <body>
     <header>
-        <img src="Hertical Sans Texture/DIN.png"><h1 class="texto">Bem-vindo ao Kiosque do Chefe</h1>
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="Hertical Sans Texture/DIN.png">
+            </div>
+            <div class="header-info">
+                <h1>Bem-vindo ao Kiosque do Chefe</h1>
+                <div class="header-buttons">
+                    <a href="#eventos" class="botao">Eventos Especiais</a>
+                    <a href="adega.html" class="botao">Adega</a>
+                    <a href="login.html" class="botao">Cadastro</a>
+                </div>
+            </div>
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            <li class="lista"><a href="#eventos" class="botao">Eventos Especiais</a></li>
-            <li class="lista"><a href="cardapio.html" class="botao">Cardápio</a></li>
-            <li class="lista"><a href="login.html" class="botao">Cadastro</a></li>
-        </ul>
-    </nav>
-
     <section id="servicos">
         <h2 class="texto">Nossos Serviços</h2>
         <!-- Inclua informações sobre os serviços oferecidos -->
@@ -36,7 +39,7 @@
 
     <section id="cardapio">
         <h2 class="texto">Cardápio</h2>
-        <a href="adega.html" class="botao">Adega</a>
+        <a href="cardapio.html" class="botao">Cardapio</a>
         <!-- Inclua informações sobre bebidas e petiscos -->
     </section>
 
@@ -46,13 +49,12 @@
     </section>
 
     <footer>
-        <pre class="texto" >&copy; 2023  Kiosque do Chefe
-    Telefone de contato:(19)989966634
-    Email de contato: kiosqdochef@gmail.com
-        </pre>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2023 Kiosque do Chefe</p>
+            <p class="footer-text">Telefone de contato: (19) 9899-66634</p>
+            <p class="footer-text">Email de contato: kiosqdochef@gmail.com</p>
+        </div>
+    </div>
     </footer>
-
-    <!-- Incluir links para arquivos JavaScript aqui -->
 </body>
 </html>
-
