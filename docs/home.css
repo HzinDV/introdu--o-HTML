@@ -42,8 +42,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    
-   
 }
 
 .header-buttons {
@@ -99,4 +97,12 @@ footer {
 }
 .corpo{
     padding: 40px;
+}
+#servicos img {
+    max-height: 70vh; 
+    padding: 8vh;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+    
 }
