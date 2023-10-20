@@ -98,18 +98,31 @@ body{
     flex-direction: column;
     align-items: end;
 }
+@media (max-width: 768px) {
+    .container,
+    .top-container,
+    .box-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.botao {
-    display: inline-block;
-    padding: 0.3em 0.5em;
-    text-decoration: none;
-    border: 1px solid #cccccc00;
-    border-radius: 4px;
-    background-color: rgb(255, 222, 89);
-    font-weight: bold;
-    color: black;
-  }
-  .botao:hover {
-    background-color: #3a2e2e10;
-    color:rgb(255, 222, 89);
+    img {
+        margin: 0 auto;
+    }
+
+    #hominho {
+        display: none;
+    }
+
+    .box2 {
+        flex-direction: column;
+        width: 90vw;
+        right: 0;
+        margin: 2vh 0;
+        text-align: right;
+    }
+
+    .box2 #vender {
+        text-align: right; /* Move o texto para a direita */
+    }
 }
