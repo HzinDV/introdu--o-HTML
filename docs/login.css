@@ -42,6 +42,11 @@ body{
     border-radius: 10px; /* Adicione esta linha para tornar as caixas de resposta mais arredondadas */
     padding: 10px; /* Adicione preenchimento para espaçamento dentro das caixas de resposta */
 }
+
+form{
+    height: 100%;
+}
+
 fieldset{
     border-color:  rgb(255, 222, 89);
     border-width: 5px;
@@ -60,4 +65,28 @@ select {
     background-color: rgba(26, 25, 29, 0.932);
     border: 2px solid gold;
     color: gold;
+}
+
+@media only screen and (min-width: 900px){
+    p {
+        font-size: 40px;
+        padding: 70px;
+        position: relative;
+        top: 15%;
+        text-align: left;
+    }
+
+    label{
+        margin-right: 20px;
+    }
+
+    input{
+       
+
+    }
+
+    fieldset{
+        height: 85vh;
+        align-items: center;
+    }
 }
