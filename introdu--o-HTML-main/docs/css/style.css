@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: 'MinhaFontePersonalizada';
+    src: url('Hertical\ Sans\ Texture/') format('woff2'),
+         url('caminho-para-fonte.minhafonte.woff') format('woff');
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo{
+  color: rgb(238, 239, 239);
+  font-family: 'MinhaFontePersonalizada', sans-serif;
+}
+.box {
+    flex: 1;
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 10px;
+    border-radius:6px;
+    background-color: rgb(255, 222, 89);
+    display: grid;
+    justify-content: center;
+}
+.box-container {
+    display: flex;
+    height: 50vh;
+}
+.box:first-child {
+    flex: 0.3; /* Define o primeiro box como maior */
+}
+
+.box-center{
+    flex: 0.6;
+}
+
+.box:nth-child(n+2) {
+    flex: 1; /* Define os três boxes inferiores para ocuparem 33.33% cada */
+}
+body{
+    background-color: rgba(26, 25, 29, 0.932);
+}
+#img1{
+    width: auto;
+    height: 30vh;
+    justify-content: center;
+}
+.titulo{
+    width: 1rem;
+    size-adjust: 1rem;
+}
