@@ -1,12 +1,15 @@
 @font-face {
     font-family: 'MinhaFontePersonalizada';
-    src: url('Hertical Sans Texture/ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
+    src: url('docs/Hertical Sans Texture/forest-italic-font') format('truetype'), /* TrueType Font */
          
         
-url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
+url('docs/Hertical Sans Texture/forest-italic-font') format('woff'); /* Web Open Font Format */
 }
 *{
     font-family: 'MinhaFontePersonalizada';
+}
+body{
+    background-color: rgb(38,37,41);
 }
 .container {
     display: flex;
@@ -26,6 +29,7 @@ url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Forma
 .box2 {
     flex: 1;
     border: 1px solid #000;
+    color: black;
     margin: 1vh;
     padding: 1,5vh;
     border-radius:3vh;
@@ -36,6 +40,8 @@ url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Forma
     justify-content: space-between;
     right: 40vh;
     margin-right: 2vh;
+    text-decoration: none;
+    transition: 0.25s ease;
 }
 #hominho{
     margin-top: 5vh;
@@ -54,6 +60,10 @@ url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Forma
     background-color: rgb(255, 222, 89);
     display: grid;
     justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: 0.25s ease;
 }
 .box-container {
     display: flex;
@@ -61,12 +71,6 @@ url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Forma
     font-size: 2rem;
     gap: 5 vh;
     margin-top: 3vh;
-}
-
-body{
-    background-color: rgb(38,37,41);
-    font-family: 'MinhaFontePersonalizada', sans-serif;
-  
 }
 #img1{
     width: auto;
@@ -85,12 +89,6 @@ body{
     font-size: 1rem;
     color: rgb(238, 239, 239);
 }
-#vendaMensal {
-    color: white;
-}
-#estoqueGeral{
-    color: white;
-}
 #vender{
     margin-top: 10vh;
     margin-right: 8vh;
@@ -98,6 +96,36 @@ body{
     flex-direction: column;
     align-items: end;
 }
+.botao {
+    display: inline-block;
+    padding: 0.3em 0.5em;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    background-color: rgb(255, 222, 89);
+    font-weight: bold;
+    color: black;
+    transition: 0.25s ease;
+    width: 50px; /* Ajuste a largura conforme necessário */
+    height: 25px;
+}
+
+.box:hover{
+    background-color: #3a2e2e10;
+    color: rgb(255, 222, 89);
+    border: 5px solid rgb(255, 222, 89)
+}
+.box2:hover{
+    background-color: #3a2e2e10;
+    color: rgb(255, 222, 89);
+    border: 5px solid rgb(255, 222, 89)
+}
+.botao:hover {
+    background-color: #3a2e2e10;
+    color: rgb(255, 222, 89);
+}
+
 @media (max-width: 768px) {
     .container,
     .top-container,
@@ -115,14 +143,25 @@ body{
     }
 
     .box2 {
-        flex-direction: column;
         width: 90vw;
         right: 0;
-        margin: 2vh 0;
-        text-align: right;
+        margin: 2vh auto;
+        text-align: center;
+        position: relative;
+    }
+    #vender{
+        display: block;
+    }
+   
+    .botao {
+        position: fixed;        
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
     }
 
-    .box2 #vender {
-        text-align: right; /* Move o texto para a direita */
-    }
+
 }
