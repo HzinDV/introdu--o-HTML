@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: 'MinhaFontePersonalizada';
+    src: url('../Hertical Sans Texture/ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
+         
+        
+url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
+}
+*{
+    font-family: 'MinhaFontePersonalizada';
+}
+body{
+    background-color: rgba(26, 25, 29, 0.932);
+}
+.texto{
+    color: rgb(255, 222, 89) ;
+}
+.botao {
+    display: inline-block;
+    padding: 0.3em 0.5em;
+    text-decoration: none;
+    border: 1px solid #cccccc00;
+    border-radius: 1vh;
+    background-color: rgb(255, 222, 89);
+    font-weight: bold;
+    color: black;
+  }
+  .botao:hover {
+    background-color: #3a2e2e10;
+    color:rgb(255, 222, 89);
+}
+.lista{
+    list-style: none;
+    display: flex; /* Altere para display flex */
+    flex-direction: column; /* Alinhe verticalmente as perguntas em uma coluna */
+    align-items: center; /* Centralize verticalmente o conteúdo */
+    padding: 0; 
+}
+.pergunta{
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 10px; /* Adicione esta linha para tornar as caixas de resposta mais arredondadas */
+    padding: 10px; /* Adicione preenchimento para espaçamento dentro das caixas de resposta */
+}
+
+form{
+    height: 100%;
+}
+
+fieldset{
+    border-color:  rgb(255, 222, 89);
+    border-width: 5px;
+}
+input {
+    border-radius: 10px; /* Adicione esta linha para tornar os campos mais arredondados */
+    padding: 10px; /* Adicione preenchimento para espaçamento dentro dos campos */
+    background-color: rgba(26, 25, 29, 0.932);
+    border: 2px solid  rgb(255, 222, 89);
+    color: rgb(255, 222, 89);
+    font-family: sans-serif;
+}
+
+select {
+    border-radius: 10px; /* Adicione esta linha para tornar os campos mais arredondados */
+    padding: 10px; /* Adicione preenchimento para espaçamento dentro dos campos */
+    background-color: rgba(26, 25, 29, 0.932);
+    border: 2px solid gold;
+    color: gold;
+}
+
+@media only screen and (max-width: 900px){
+    p {
+        font-size: 40px;
+        padding: 70px;
+        position: relative;
+        top: 15%;
+        text-align: left;
+    }
+
+    label{
+        margin-right: 20px;
+    }
+
+    input{
+       
+
+    }
+
+    fieldset{
+        height: 85vh;
+        align-items: center;
+    }
+}
