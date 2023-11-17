@@ -5,11 +5,18 @@
         
 url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
 }
-*{
-    font-family: 'MinhaFontePersonalizada';
-}
+
 body{
     background-color: rgb(38,37,41);
+}
+.popup{
+    font-family: sans-serif;
+}
+span{
+    font-family: sans-serif;
+}
+*{
+    font-family: 'MinhaFontePersonalizada';
 }
 .container {
     display: flex;
@@ -114,8 +121,10 @@ body{
 .box:hover{
     background-color: #3a2e2e10;
     color: rgb(255, 222, 89);
-    border: 5px solid rgb(255, 222, 89)
+    border: 5px solid rgb(255, 222, 89);
+    cursor: pointer;
 }
+
 .box2:hover{
     background-color: #3a2e2e10;
     color: rgb(255, 222, 89);
@@ -124,6 +133,63 @@ body{
 .botao:hover {
     background-color: #3a2e2e10;
     color: rgb(255, 222, 89);
+}
+/* Adicione este bloco no seu arquivo de estilo CSS (styleAdega.css) */
+/* Adicione este bloco ao seu arquivo de estilo CSS (styleAdega.css) */
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: unset;
+}
+
+.modal-content {
+    background-color: rgb(255, 222, 89);
+    margin: 10% auto;
+    padding: 10px;
+    border-radius: 5vh;
+    width: 80%;
+    height: 60%;
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: 0.25s ease;
+}
+
+#fecharModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#fecharModal:hover,
+#fecharModal:focus {
+    color: black;
+    text-decoration: none;
+    font-family: 'MinhaFontePersonalizada';
+    cursor: pointer;
+}
+select {
+    border-radius: 10px; /* Adicione esta linha para tornar os campos mais arredondados */
+    padding: 10px; /* Adicione preenchimento para espaçamento dentro dos campos */
+    background-color: rgba(26, 25, 29, 0.932);
+    border: 2px solid gold;
+    color: gold;
+}
+.pergunta{
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 10px; /* Adicione esta linha para tornar as caixas de resposta mais arredondadas */
+    padding: 10px; /* Adicione preenchimento para espaçamento dentro das caixas de resposta */
 }
 
 @media (max-width: 768px) {
