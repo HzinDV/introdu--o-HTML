@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MinhaFontePersonalizada';
-    src: url('../texturas/ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
+    src: url('../Hertical Sans Texture/ForestItalicPersonalUseBoldItalic-MVmjw.ttf') format('truetype'), /* TrueType Font */
          
         
 url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
@@ -127,9 +127,7 @@ body{
     background-color: #3a2e2e10;
     color: rgb(255, 222, 89);
 }
-/* Adicione este bloco no seu arquivo de estilo CSS (styleAdega.css) */
-/* Adicione este bloco ao seu arquivo de estilo CSS (styleAdega.css) */
-#myModal {
+.shared-modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -172,19 +170,22 @@ body{
     font-family: 'MinhaFontePersonalizada';
     cursor: pointer;
 }
+
 select {
-    border-radius: 10px; /* Adicione esta linha para tornar os campos mais arredondados */
-    padding: 10px; /* Adicione preenchimento para espaçamento dentro dos campos */
+    border-radius: 10px;
+    padding: 10px;
     background-color: rgba(26, 25, 29, 0.932);
     border: 2px solid gold;
     color: gold;
 }
-.pergunta{
+
+.pergunta {
     text-align: center;
     margin: 10px 0;
-    border-radius: 10px; /* Adicione esta linha para tornar as caixas de resposta mais arredondadas */
-    padding: 10px; /* Adicione preenchimento para espaçamento dentro das caixas de resposta */
+    border-radius: 10px;
+    padding: 10px;
 }
+
 
 @media (max-width: 768px) {
     .container,

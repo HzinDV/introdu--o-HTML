@@ -1,32 +1,47 @@
-// main.js
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Variáveis de quantidade para cada produto
-    var novoProdutoBtn = document.getElementById('novoProdutoBtn');
-    var vendaMensalBtn = document.getElementById('vendaMensalBtn');
-    var venderBtn = document.getElementById('venderBtn');
+    // Evento de mudança no select
+    var selectProduto = document.getElementsByName('campo_preferencias')[0];
+    var quantidadeSelecionadaValor = document.getElementById('quantidadeSelecionadaValor');
 
-   // Adicionar um ouvinte de evento de clique ao botão "Novo Produto"
-    var botaoNovoProduto = document.getElementById('novoProdutoBtn');
-    botaoNovoProduto.addEventListener('click', function () {
-        mostrarPopUp('Novo Produto');
+    selectProduto.addEventListener('change', function () {
+        // Obtém a quantidade do produto selecionado
+        var quantidadeProdutoSelecionado = obterQuantidadeProdutoSelecionado(this.value);
+
+        // Atualiza a quantidade no HTML após o texto "Quantidade"
+        quantidadeSelecionadaValor.textContent =  quantidadeProdutoSelecionado;
+
+        // Outras atualizações que você desejar fazer quando o produto é alterado
+        totalItens = calcularTotalItens();
+        totalItensSpan.textContent = totalItens;
     });
 
-    // Adicionar um ouvinte de evento de clique ao botão "Venda Mensal"
-    var botaoVendaMensal = document.getElementById('vendaMensalBtn');
-    botaoVendaMensal.addEventListener('click', function () {
-        mostrarPopUp('Venda Mensal');
-    });
-
-    // Adicionar um ouvinte de evento de clique ao botão "Vender"
-    var botaoVender = document.getElementById('venderBtn');
-    botaoVender.addEventListener('click', function () {
-        mostrarPopUp('Vender');
-    });
-
-   
+    // Função para obter a quantidade do produto selecionado
+    function obterQuantidadeProdutoSelecionado(produto) {
+        switch (produto) {
+            case 'brahma':
+                return quantidadeBrahma;
+            case 'skol':
+                return quantidadeSkol;
+            case 'petra':
+                return quantidadePetra;
+            case 'cabern':
+                return quantidadeCabernet;
+            case 'chardnn':
+                return quantidadeChardonnay;
+            case 'merr':
+                return quantidadeMerlot;
+            case 'macallan':
+                return quantidadeMacallan;
+            case 'jackdan':
+                return quantidadeJackDaniels;
+            case 'james':
+                return quantidadeJameson;
+            default:
+                return 0;
+        }
+    }   
     var quantidadeBrahma = 10;
-    var quantidadeSkol = 10;
+    var quantidadeSkol = 9;
     var quantidadePetra = 10;
     var quantidadeCabernet = 10;
     var quantidadeChardonnay = 10;
@@ -35,120 +50,38 @@ document.addEventListener('DOMContentLoaded', function () {
     var quantidadeJackDaniels = 10;
     var quantidadeJameson = 10;
 
-    // Variável para total de itens
     var totalItens = calcularTotalItens();
 
-    // Encontrar elementos HTML relacionados às quantidades
     var quantidadeCervejas = document.getElementById('quantidadeCervejas');
     var quantidadeWisky = document.getElementById('quantidadeWisky');
     var quantidadeVinho = document.getElementById('quantidadeVinho');
-    var botaoEstoque = document.getElementById('estoqueGeral');
     var totalItensSpan = document.getElementById('totalItensValor');
     var itensEmFaltaSpan = document.getElementById('itensEmFalta');
-
-    // Encontrar o modal
+    
+    var botaoEstoque = document.getElementById('estoqueGeral');
     var modal = document.getElementById('myModal');
-
-    // Encontrar o botão para fechar o modal
     var fecharModal = document.getElementById('fecharModal');
 
-    // Adicionar um ouvinte de evento de clique ao botão de estoque
     botaoEstoque.addEventListener('click', function () {
-        // Exibir o modal ao clicar no botão de estoque
-        modal.style.display = 'block';
-        // Atualizar os valores no modal
         quantidadeCervejas.textContent = 'Cervejas: ' + (quantidadeBrahma + quantidadeSkol + quantidadePetra);
         quantidadeWisky.textContent = 'Wisky: ' + (quantidadeMacallan + quantidadeJackDaniels + quantidadeJameson);
         quantidadeVinho.textContent = 'Vinho: ' + (quantidadeCabernet + quantidadeChardonnay + quantidadeMerlot);
-        // Atualizar total de itens no modal
         totalItensSpan.textContent = totalItens;
-        // Identificar e exibir o item com menor quantidade em falta
+        
         var menorQuantidadeItem = identificarMenorQuantidadeItem();
         itensEmFaltaSpan.textContent = 'Itens em falta: ' + menorQuantidadeItem.nome + ' ' + menorQuantidadeItem.quantidade;
+
+        modal.style.display = 'block';
     });
 
-    // Adicionar um ouvinte de evento de clique ao botão para fechar o modal
     fecharModal.addEventListener('click', function () {
-        // Fechar o modal ao clicar no botão de fechar
         modal.style.display = 'none';
     });
 
-    // Adicionar um ouvinte de evento de clique ao botão "Novo Produto"
-    var botaoNovoProduto = document.getElementById('novoProduto');
-    botaoNovoProduto.addEventListener('click', function () {
-        alert('Pop-up para Novo Produto');
-        // Você pode substituir o alert acima pelo código que exibe o pop-up desejado
-    });
-
-    // Adicionar um ouvinte de evento de clique ao botão "Venda Mensal"
-    var botaoVendaMensal = document.getElementById('vendaMensal');
-    botaoVendaMensal.addEventListener('click', function () {
-        alert('Pop-up para Venda Mensal');
-        // Você pode substituir o alert acima pelo código que exibe o pop-up desejado
-    });
-
-    // Adicionar um ouvinte de evento de clique ao botão "Vender"
-    var botaoVender = document.getElementById('vender');
-    botaoVender.addEventListener('click', function () {
-        alert('Pop-up para Vender');
-        // Você pode substituir o alert acima pelo código que exibe o pop-up desejado
-    });
-
-    // Adicionar um ouvinte de evento de mudança para o campo de seleção de produtos
-    var campoPreferencias = document.getElementsByName('campo_preferencias')[0];
-    var quantidadeSelecionadaValor = document.getElementById('quantidadeSelecionadaValor');
-
-    campoPreferencias.addEventListener('change', function () {
-        // Atualizar o conteúdo do span com a quantidade selecionada
-        switch (this.value) {
-            case 'brahma':
-                quantidadeSelecionadaValor.textContent = quantidadeBrahma;
-                break;
-            case 'skol':
-                quantidadeSelecionadaValor.textContent = quantidadeSkol;
-                break;
-            case 'petra':
-                quantidadeSelecionadaValor.textContent = quantidadePetra;
-                break;
-            case 'cabern':
-                quantidadeSelecionadaValor.textContent = quantidadeCabernet;
-                break;
-            case 'chardnn':
-                quantidadeSelecionadaValor.textContent = quantidadeChardonnay;
-                break;
-            case 'merr':
-                quantidadeSelecionadaValor.textContent = quantidadeMerlot;
-                break;
-            case 'macallan':
-                quantidadeSelecionadaValor.textContent = quantidadeMacallan;
-                break;
-            case 'jackdan':
-                quantidadeSelecionadaValor.textContent = quantidadeJackDaniels;
-                break;
-            case 'james':
-                quantidadeSelecionadaValor.textContent = quantidadeJameson;
-                break;
-            default:
-                quantidadeSelecionadaValor.textContent = '0';
-                break;
-        }
-
-        // Atualizar total de itens no modal
-        totalItens = calcularTotalItens();
+        totalItens = calcularTotalItens();{
         totalItensSpan.textContent = totalItens;
-    });
+    }
 
-        function mostrarPopUp(titulo) {
-            // Exibir o modal ao clicar no botão
-            modal.style.display = 'block';
-
-            // Atualizar o título do pop-up
-            document.getElementById('tituloPopUp').textContent = titulo;
-
-            // ... (outras atualizações necessárias para o conteúdo do pop-up)
-        }
-
-    // Função para calcular o total de itens
     function calcularTotalItens() {
         return (
             quantidadeBrahma + quantidadeSkol + quantidadePetra +
@@ -157,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    // Função para identificar o item com menor quantidade em falta
     function identificarMenorQuantidadeItem() {
         var itens = [
             { nome: 'Brahma', quantidade: quantidadeBrahma },
@@ -177,6 +109,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return menorQuantidadeItem;
     }
-       
-
 });
