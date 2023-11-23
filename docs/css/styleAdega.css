@@ -72,6 +72,11 @@ body{
     gap: 5 vh;
     margin-top: 3vh;
 }
+.imagem{
+    width: auto;
+    height: 30vh;
+    justify-content: center;
+}
 #img1{
     width: auto;
     height: 30vh;
