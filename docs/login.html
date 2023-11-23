@@ -2,21 +2,21 @@
 <html lang="pt-br">
     <head>
         <title>Login</title>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/login.css">
     <body>
         <h1 class="texto">Login Kiosqui do chef</h1>
         <form action="http://localhost:8080/clientes" method="POST">
             <fieldset>
-                <p class="pergunta">
+                <p class="pergunta" id="name">
                     <label for="name" class="texto">Nome:</label>
                     <input tabindex="2" type="text" name="name" id="name">
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="campo_email">
                     <label for="campo_email" class="texto">Email:</label>
                     <input tabindex="1" type="email" name="email" id="campo_email" placeholder="email@email.com">                    
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="gender">
                     <label for="gender" class="texto">Gênero</label>
                     <select name="gender">
                         <option value="MAN">Masculino</option>
@@ -24,11 +24,11 @@
                         <option value="OTHER">Outro</option>
                     </select>
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="birthdate>
                     <label for="birthdate" class="texto">Data nascimento: </label> 
                     <input type="date" id="birthdate" name="birthdate">
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="favoriteDrink">
                     <label for="favoriteDrink" class="texto">Preferências</label>
                     <select name="favoriteDrink">
                         <optgroup label="Cerveja">
@@ -48,7 +48,7 @@
                         </optgroup>
                     </select>
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="favoriteMusicType">
                     <label for="favoriteMusicType" class="texto">Música favorita</label>
                     <select name="favoriteMusicType">
                         <option value="sertanejo">Sertanejo</option>
@@ -59,11 +59,11 @@
                         <option value="pagode">Pagode</option>
                     </select>
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="phoneNumber">
                     <label for="phoneNumber" class="texto">Número de telefone: </label>
                     <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="(12)12345-67890">
                 </p>
-                <p class="pergunta">
+                <p class="pergunta" id="promotions">
                     <label for="promotions" class="texto">Você deseja receber informações promocionais ou sobre eventos do Kiosque?</label> 
                     <input type="checkbox" id="promotions" name="promotions">
                 </p>
