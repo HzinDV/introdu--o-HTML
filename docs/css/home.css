@@ -31,7 +31,7 @@ header {
 }
 
 .header-logo img {
-    float: left!important ;
+    float: left ;
     max-width: 40vh; 
 }
 
@@ -100,16 +100,19 @@ footer {
 }
 #servicos img {
     max-height: 70vh;
-    width: auto;
+    width: 45vh;
     height: auto;
-    padding: 8vh;
+    padding: 5vh;
     display: inline-block;
     vertical-align: top; 
     flex-direction: row;
     justify-content: center;
 }
+#pessoas {
+    margin-bottom: 20px; /* Adicione a margem inferior desejada */
+}
 
-@media (max-width: 768px) {
+@media (max-width: 970px) {
     body {
         flex-direction: column;
     }
@@ -126,9 +129,9 @@ footer {
     }
 
     #servicos img {
-        max-height: auto;
-        width: 100%;
-        padding: 10px;
+        max-height: 50vh;
+        width: 30vh;
+        padding: 5px;
     }
 
     .header-content {
@@ -136,7 +139,9 @@ footer {
     }
 
     .header-logo img {
-        max-width: 100%; /* Definir a largura máxima da imagem do logotipo */
+        float: none; /* Remova o float */
+        margin: 0 auto; /* Centralize o logo usando margin */
+        display: block; /* Remova o inline behavior */
     }
     .header {
         width: 100%;
@@ -146,3 +151,4 @@ footer {
         width: 100%;
     }
 }
+
