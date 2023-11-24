@@ -8,29 +8,29 @@
         <h1 class="texto">Login Kiosqui do chef</h1>
         <form action="http://localhost:8080/clientes" method="POST">
             <fieldset>
-                <p class="pergunta" id="name">
+                <p class="pergunta" >
                     <label for="name" class="texto">Nome:</label>
-                    <input tabindex="2" type="text" name="name">
+                    <input tabindex="2" type="text" id="name" name="name">
                 </p>
-                <p class="pergunta" id="campo_email">
+                <p class="pergunta" >
                     <label for="campo_email" class="texto">Email:</label>
-                    <input tabindex="1" type="email" name="email" placeholder="email@email.com">                    
+                    <input tabindex="1" id="campo_email" type="email" name="email" placeholder="email@email.com">                    
                 </p>
-                <p class="pergunta" id="gender">
+                <p class="pergunta" >
                     <label for="gender" class="texto">Gênero</label>
-                    <select name="gender">
+                    <select name="gender" id="gender">
                         <option value="MAN">Masculino</option>
                         <option value="WOMAN">Feminino</option>
                         <option value="OTHER">Outro</option>
                     </select>
                 </p>
-                <p class="pergunta" id="birthdate">
+                <p class="pergunta" >
                     <label for= "birthdate" class="texto">Data nascimento: </label> 
-                    <input type="date" name="birthdate">
+                    <input type="date" name="birthdate" id="birthdate">
                 </p>
-                <p class="pergunta" id="favoriteDrink">
+                <p class="pergunta" >
                     <label for="favoriteDrink" class="texto">Preferências</label>
-                    <select name="favoriteDrink">
+                    <select name="favoriteDrink" id="favoriteDrink">
                         <optgroup label="Cerveja">
                             <option value="brahma">Brahma</option>
                             <option value="skol">Skol</option>
@@ -48,9 +48,9 @@
                         </optgroup>
                     </select>
                 </p>
-                <p class="pergunta" id="favoriteMusicType">
+                <p class="pergunta" >
                     <label for="favoriteMusicType" class="texto">Música favorita</label>
-                    <select name="favoriteMusicType">
+                    <select name="favoriteMusicType" id="favoriteMusicType">
                         <option value="sertanejo">Sertanejo</option>
                         <option value="forro">Forró</option>
                         <option value="funk">Funk</option>
@@ -59,13 +59,13 @@
                         <option value="pagode">Pagode</option>
                     </select>
                 </p>
-                <p class="pergunta" id="phoneNumber">
+                <p class="pergunta" >
                     <label for="phoneNumber" class="texto">Número de telefone: </label>
-                    <input type="tel" name="phoneNumber" placeholder="(12)12345-67890">
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(12)12345-67890">
                 </p>
-                <p class="pergunta" id="promotions">
+                <p class="pergunta" >
                     <label for="promotions" class="texto">Você deseja receber informações promocionais ou sobre eventos do Kiosque?</label> 
-                    <input type="checkbox" name="promotions">
+                    <input type="checkbox" name="promotions" id="promotions">
                 </p>
             </fieldset>
             <br>
