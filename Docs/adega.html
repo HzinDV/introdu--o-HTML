@@ -1,0 +1,127 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adega</title>
+    <link rel="stylesheet" href="css/styleAdega.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <div class="container">
+        <div class="top-container">
+            <div class="titulo">
+                <img src="textura/DIN.png" alt="" id="imgPrincipal">
+            </div>
+            <a class="box2" id="venderBtn">
+                <div id="hominho"><img src="textura/hominho.png" alt=""></div>
+                <div id="vender"><img src="textura/moeda-de-dolar.png" alt="" id="img2">VENDER</div>
+            </a>
+        </div>
+        <div class="box-container">
+            <a class="box" id="vendaMensalBtn">
+                <p class="texto" id="textoVendaMensal">Venda Mensal</p>
+                <img src="textura/grafico-de-barras.png" alt="" id="img1" class="imagem">
+            </a>
+            <a class="box" id="novoProdutoBtn">
+                <p class="texto">Novo Produto</p>
+                <img src="textura/International-Beer-Day-cuate.svg " alt="" id="img3" class="imagem">
+            </a>
+            <a class="box" id="estoqueGeral">
+                <p class="texto">Estoque Geral</p>
+                <img src="textura/beer-keg.png" alt="" id="img4" class="imagem">
+            </a>
+        </div>
+    </div>
+    <a href="index.html" class="botao">voltar</a>
+
+ <!-- Seu HTML -->
+
+    <!-- Modal para Novo Produto -->
+    <div id="myModalNovoProduto" class="modal shared-modal">
+        <div class="modal-content">
+            <span class="fecharModal" onclick="fecharModal('myModalNovoProduto')">&times;</span>
+            <!-- Conteúdo específico para Novo Produto -->
+            <h2>Novo Produto</h2>
+            <div>
+                <!-- Adicione o conteúdo específico aqui -->
+                <p>Conteúdo do Novo Produto...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Venda Mensal -->
+    <div id="myModalVendaMensal" class="modal shared-modal">
+        <div class="modal-content">
+            <span class="fecharModal" onclick="fecharModal('myModalVendaMensal')">&times;</span>
+            <!-- Conteúdo específico para Venda Mensal -->
+            <h2>Venda Mensal</h2>
+            <div id="conteudo-vendas-geral">
+                <button onclick="consultarAPI()">Consultar API</button>
+
+                <div id="resultado"></div>
+                <!-- Adicione o conteúdo específico aqui -->
+                <p>Conteúdo da Venda Mensal...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Vender -->
+    <div id="myModalVender" class="modal shared-modal">
+        <div class="modal-content">
+            <span class="fecharModal" onclick="fecharModal('myModalVender')">&times;</span>
+            <!-- Conteúdo específico para Vender -->
+            <h2>Vender</h2>
+            <div>
+                <!-- Adicione o conteúdo específico aqui -->
+                <p>Conteúdo do Vender...</p>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal shared-modal">
+        <div class="modal-content">
+            <span class="fecharModal" onclick="fecharModal('myModal')">&times;</span>
+            <div>
+                <h2>Estoque Geral</h2>
+                <p>Total de itens: <span id="totalItensValor"></span></p>
+                <p id="quantidadeCervejas">Cervejas: <span id="quantidadeCervejaValor">0</span></p>
+                <p id="quantidadeWisky">Wisky: <span id="quantidadeWiskyValor">0</span></p>
+                <p id="quantidadeVinho">Vinho: <span id="quantidadeVinhoValor">0</span></p>
+            </div>
+            <div>
+                <p id="itensEmFalta"></p>
+                <p class="pergunta">
+                    <label id="campo_preferencias" class="texto">Produto</label>
+                    <select name="campo_preferencias">
+                        <optgroup label="Cerveja">
+                            <option value="brahma">Brahma</option>
+                            <option value="skol">Skol</option>
+                            <option value="petra">Petra</option>
+                        </optgroup>
+                        <optgroup label="vinho">
+                            <option value="cabern">Cabernet Sauvignon</option>
+                            <option value="chardnn">Chardonnay</option>
+                            <option value="merr">Merlot</option>
+                        </optgroup>
+                        <optgroup label="whisky">
+                            <option value="macallan">Macallan</option>
+                            <option value="jackdan">Jack Daniels</option>
+                            <option value="james">Jameson</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p id="quantidadeSelecionada">Quantidade: <span id="quantidadeSelecionadaValor">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
