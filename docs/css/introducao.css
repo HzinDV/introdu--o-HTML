@@ -6,6 +6,10 @@
 url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
 }
 
+body :not(:is(span, p, div):not([class*="numero"])) {
+    font-family: sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
