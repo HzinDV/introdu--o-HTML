@@ -105,15 +105,13 @@ body{
     display: inline-block;
     padding: 0.3em 0.5em;
     text-decoration: none;
-    text-align: center;
     border: 1px solid #cccccc00;
-    border-radius: 4px;
+    border-radius: 1vh;
+    height: 3.2vh; /* Defina a largura como 100% para ocupar o espaço disponível */ /* Defina um valor máximo se desejar limitar a largura */
     background-color: rgb(255, 222, 89);
     font-weight: bold;
     color: black;
-    transition: 0.25s ease;
-    width: 50px; /* Ajuste a largura conforme necessário */
-    height: 25px;
+    bottom: 0;
 }
 
 .box:hover{
