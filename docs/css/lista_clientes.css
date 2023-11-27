@@ -35,3 +35,6 @@ body {
     background-color: #3a2e2e10;
   /*  color: rgb(255, 222, 89); */
 }
+ td{
+    font-family: sans-serif;
+ }
