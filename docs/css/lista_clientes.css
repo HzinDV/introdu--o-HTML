@@ -6,9 +6,6 @@
 url('caminho-para-fonte.minhafonte.woff') format('woff'); /* Web Open Font Format */
 }
 
-h1{
-    font-family: MinhaFontePersonalizada;
-}
 body {
     display: flex;
     flex-direction: column;
@@ -37,6 +34,3 @@ body {
     background-color: #3a2e2e10;
   /*  color: rgb(255, 222, 89); */
 }
- td{
-    font-family: sans-serif;
- }
